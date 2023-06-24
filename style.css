@@ -29,6 +29,7 @@ nav ul{
     display: grid;
     grid-template-columns: repeat(3,10vw);
     grid-template-rows: repeat(3,10vw);
+    
 }
 
 .box{
@@ -36,11 +37,52 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 5px 10px 10px -5px rgb(0.5,  0.5, 0.5);
 }
+.box:hover{
+    background-color: rgb(255, 239, 209);
+    cursor: pointer;
+}
+
 .boxText{
    font-size: 3em;
 }
 
 #info{
     margin-left: 2rem;
+}
+
+@media(max-width:400px){
+    nav{
+        width: 100vw;
+    }
+    #mainContiner{
+        display:flex;
+        justify-content: center;
+        flex-direction: column;
+        
+    }
+    .container{
+        margin: auto;
+    }
+    #info{
+        margin-top: 2rem;
+    }
+}
+
+.bt-0{
+    border-top: none;
+}
+.bl-0{
+    border-left: none;
+}
+.br-0{
+    border-right: none;
+}
+.bb-0{
+    border-bottom: none;
+}
+
+.img{
+    display: none;
 }
