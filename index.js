@@ -26,6 +26,7 @@ const CheckWin = () => {
         if(boxes[e[0]].innerText===boxes[e[1]].innerText && boxes[e[2]].innerText===boxes[e[1]].innerText && boxes[e[0]].innerText!==""){
             document.getElementsByClassName("turn")[0].innerText=boxes[e[0]].innerText +""+ "Won";
             gameover.play();
+            document.querySelector(".imgs").getElementsByTagName('img')[0].style.width="200px";
         }
     })
 };
@@ -46,3 +47,16 @@ Array.from(boxes).forEach((element) => {
     }
   });
 });
+
+//Reset button
+
+// let Resets=document.getElementsByClassName("Reset")
+Reset.addEventListener("click",()=>{
+  let boxtext = document.querySelectorAll(".boxText");
+  Array.from(boxes).forEach((e)=>{
+    e.innerText="";    
+  })
+  Turn="X"
+  document.getElementsByClassName('turn')[0].innerText="Turn for" + Turn;
+  document.querySelector(".imgs").getElementsByTagName('img')[0].style.width="0";
+})

@@ -25,13 +25,14 @@ nav ul{
     display: flex;
     justify-content: center;
     margin-top: 5rem;
+    
 }
 
 .container{
     display: grid;
     grid-template-columns: repeat(3,10vw);
     grid-template-rows: repeat(3,10vw);
-    
+    position: relative;
 }
 
 .box{
@@ -39,15 +40,16 @@ nav ul{
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 5px 10px 10px -5px rgb(0.5,  0.5, 0.5);
+    /* box-shadow: 5px 10px 10px -5px rgb(0.5,  0.5, 0.5); */
 }
+
 .box:hover{
     background-color: rgb(255, 239, 209);
     cursor: pointer;
 }
 
 .boxText{
-   font-size: 3em;
+   font-size: 8em;
 }
 
 #info{
@@ -56,16 +58,27 @@ nav ul{
 #info p,h3{
     font-size: 1.5rem;
 }
+.turn{
+font-size: 1.7rem;
+}
+
 #Reset{
     border: 1px solid black;
     border-radius: 5px;
-    padding: 0px 5px;
-    margin-left: 0.2rem;
+    padding: 0px 12px;
+    margin-left: 0.7rem;
     font-weight: 400;
     font-size: 1rem;
-    background-color: white;
-    /* box-shadow: 5px 10px 2px -8px rgb(0.5,  0.5, 0.5); */
+    background-color: wheat;
+    box-shadow: 7px 7px 0px -5px  rgb(0.5,  0.5, 0.5);
     cursor:pointer;
+}
+.line{
+    background-color: black;
+    height: 3px;
+    width: 30vw;
+    position: absolute;
+    left: 0;
 }
 
 @media(max-width:400px){
@@ -84,6 +97,14 @@ nav ul{
     #info{
         margin-top: 2rem;
     }
+    .boxText{
+        font-size: 1.4rem;
+     }
+}
+@media(max-width:1170px)and(min-width:500px){
+    .boxText{
+        font-size: 3em;
+     }
 }
 
 .bt-0{
@@ -99,6 +120,7 @@ nav ul{
     border-bottom: none;
 }
 
-.imgs{
+.imgs img{
     width: 0;
+    transition: width 1s ease-out;
 }
